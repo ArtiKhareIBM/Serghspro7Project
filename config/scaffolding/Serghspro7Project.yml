@@ -8,7 +8,23 @@ packages:
   gitUsername: ArtiKhareIBM
   gitBranch: main
 - name: upperfspackage
+  version: "1.0"
   gitServerName: srcCtrl_bitbucket_Arti
   gitUrl: https://bitbucket.org/testartiibm
   gitUsername: artikhare
   gitBranch: master
+services:
+- serviceName: project.serghspro7.integrations:bitbucketfs
+  packages:
+  - name: Serghspro7Project
+    version: "1.0"
+  - name: upperfspackage
+    version: "1.0"
+- serviceName: UpperFSPackage:upperfs
+  packages:
+  - name: upperfspackage
+    version: "1.0"
+- serviceName: pub.string:toUpper
+  packages:
+  - name: WmPublic
+    version: 11.1.0.0.2061
